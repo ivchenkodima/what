@@ -1,15 +1,16 @@
 @import "_media"
-@import header
-@import animation
-@import main
-@import footer
-
 
 @font-face
-  font-family: "Product Sans"
-  src: url("../fonts/Product-Sans.ttf")
+  font-family: "Muller Bold"
+  src: url("../fonts/muller/TTF (TrueType)/Muller-ExtraBold-DEMO.ttf")
+  font-weight: bold
+  font-style: normal
+@font-face
+  font-family: "Muller Bold"
+  src: url("../fonts/muller/TTF (TrueType)/Muller-Thin-DEMO.ttf")
   font-weight: normal
   font-style: normal
+
 
 html
     padding: 0
@@ -20,7 +21,7 @@ body
   position: relative
   -webkit-overflow-scrolling: touch
   font-size: 14px
-  font-family: "Product Sans"
+  font-family: "Muller Thin"
   background-color: #ffffff
   font-weight: normal
   margin: 0
@@ -43,9 +44,49 @@ p
   vertical-align: middle
 .center
   text-align: center
+  margin: 0 auto
 
 
 .clearfix
     clear: both
     content: ""
     display: block
+.main
+  display: block
+
+  &__what
+    background: url(../img/Logo_black.png) no-repeat no-repeat center center fixed
+    background-size: cover
+  &__error
+    background: url(../img/bgr_error.jpg) no-repeat no-repeat fixed
+    background-size: cover
+    height: 100%
+    width: 100%
+    position: fixed
+    top: 0
+    img
+      height: 80px
+      margin: 80px 0
+    .error__title
+      font-weight: bold
+      font-size: 16px
+      font-family: "Muller Bold"
+      color: #FFF
+      margin-bottom: 65px
+    a
+      text-decoration: none
+      .btn
+        font-family: "Muller Bold"
+        width: 270px
+        height: 70px
+        border-radius: 20px
+        border: 2px solid #00eaff
+        margin: 0 auto
+        color: #fff
+        text-align: center
+        line-height: 70px
+        vertical-align: middle
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 2px
+        font-size: 14px
