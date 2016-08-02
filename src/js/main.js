@@ -13,12 +13,16 @@ myApp.config(['$stateProvider','$urlRouterProvider',
             url:'/what2',
             templateUrl: 'template/what2.html'
         })
+        .state('who',{
+            url:'/who',
+            templateUrl: 'template/who.html'
+        })
         .state('error',{
             url:'/error',
             templateUrl: 'template/error.html'
         });
 
 
-        $urlRouterProvider.otherwise("/error");
+        $urlRouterProvider.otherwise("/what");
 
     }]);
