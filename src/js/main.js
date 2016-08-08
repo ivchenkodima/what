@@ -8,21 +8,19 @@ myApp.config(['$stateProvider','$urlRouterProvider',
         $stateProvider.state('what',{
             url:'/what',
             templateUrl: 'template/what.html'
-        })
-        .state('what2',{
+        });
+        $stateProvider.state('what2',{
             url:'/what2',
             templateUrl: 'template/what2.html'
-        })
-        .state('who',{
+        });
+        $stateProvider.state('who',{
             url:'/who',
             templateUrl: 'template/who.html'
-        })
-        .state('error',{
+        });
+        $stateProvider.state('error',{
             url:'/error',
             templateUrl: 'template/error.html'
         });
-
-
         $urlRouterProvider.otherwise("/what");
 
     }]);

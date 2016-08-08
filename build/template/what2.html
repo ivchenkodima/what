@@ -1,13 +1,18 @@
-<section class="main" ng-controller="FilmCtrl">
-        <img src="/img/Logo_block.png" alt="">
-        <p>{{$scope.name}}</p>
-        <h1>{{$scope.what}}</h1>
-        <div>
-                <a href="/" ui-sref="/main">
-                    <span class="btn">Еще совет</span>
-                </a>
-                <a href="/" ui-sref="/main">
-                        <span class="btn">Загуглить</span>
+<section class="main main__what">
+        <div class="center">
+                <img src="../img/Logo_white.png" alt="">
+                <p class="main__what__description">Иван, посмотри</p>
+                <h1 class="main__what__header film">Манина, девушка в бикини (1952)</h1>
+                <div class="center btn__container">
+                        <a href="/" ui-sref="/main" class="two">
+                                <div class="btn btn-yellow">Еще совет</div>
+                        </a>
+                        <a href="/" ui-sref="/main" class="two">
+                                <div class="btn">Загуглить</div>
+                        </a>
+                </div>
+                <a href=""  ui-sref="/who">
+                        <p class="link">Кто он этот робот?</p>
                 </a>
         </div>
 </section>

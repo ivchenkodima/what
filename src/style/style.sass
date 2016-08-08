@@ -65,7 +65,7 @@ p
     background: url(../img/Logo_black.png) no-repeat no-repeat center center fixed
     background-size: cover
   &__error
-    background: url(../img/bgr_error.jpg) no-repeat no-repeat fixed
+    background: url(../img/bgr_error.jpg) no-repeat fixed
     background-size: cover
     height: 100%
     width: 100%
@@ -74,7 +74,7 @@ p
     img
       height: auto
       width: 220px
-      margin: 80px 0
+      margin: 80px 0 63px
     a
       text-decoration: none
       .btn
@@ -96,7 +96,7 @@ p
     img
       height: auto
       width: 220px
-      margin: 80px 0
+      margin: 80px 0 63px
     .title
       color: #000
       margin-bottom: 45px
@@ -128,7 +128,7 @@ p
     width: 100%
     position: fixed
     top: 0
-    h1
+    &__header
       font-family: "Muller Thin"
       text-transform: uppercase
       font-size: 48px
@@ -139,25 +139,28 @@ p
       letter-spacing: 2px
       margin: 61px 0
       font-weight: 100
-    .name
+      .film
+        text-transform: none !important
+    &__description
       font-size: 16px
       font-family: "Muller Bold"
       color: #fff
       letter-spacing: 2px
-      margin-bottom: 40px
+      margin-bottom: 31px
     img
       height: auto
       width: 220px
-      margin: 80px 0
+      margin: 80px 0 63px
     a
       text-decoration: none
+      .two
+        display: inline-block
       .btn
         font-family: "Muller Bold"
         width: 270px
         height: 70px
         border-radius: 20px
         border: 2px solid #00eaff
-        margin: 0 auto
         color: #fff
         text-align: center
         line-height: 70px
@@ -166,3 +169,116 @@ p
         font-weight: bold
         letter-spacing: 2px
         font-size: 14px
+        margin: 50px auto 33px
+    input
+      background-color: transparent !important
+      width: 291px
+      border: 0
+      border-bottom: 1px solid #fff
+      height: 30px
+      color: #fff
+      font-size: 14px
+      text-align: center
+      text-transform: uppercase
+      letter-spacing: 2px
+
+      &:focus
+        outline: none
+      &:active
+        border: 0
+        border-bottom: 1px solid #fff
+    .link
+      letter-spacing: 9px
+      text-transform: uppercase
+      font-size: 8px
+      color: #fff
+      font-weight: bold
+      font-family: "Roboto"
+  &__what
+    background: url(../img/bgr_blue.jpg) no-repeat no-repeat fixed
+    background-size: cover
+    height: 100%
+    width: 100%
+    position: fixed
+    top: 0
+    &__header
+      font-family: "Muller Thin"
+      text-transform: uppercase
+      font-size: 48px
+      +max-screen(700)
+        font-size: 24px
+        margin: 21px 0
+      color: #fff
+      letter-spacing: 2px
+      margin: 61px 0
+      font-weight: 100
+      &.film
+        text-transform: none !important
+    &__description
+      font-size: 16px
+      font-family: "Muller Bold"
+      color: #fff
+      letter-spacing: 2px
+      margin-bottom: 31px
+    img
+      height: auto
+      width: 220px
+      margin: 80px 0 63px
+    a
+      text-decoration: none
+      display: block
+      &.two
+        display: inline-block !important
+        width: 49%
+        max-width: 49%
+        +max-screen(700)
+          display: block !important
+          width: 100%
+          margin: 0 auto
+      &.btn
+        font-family: "Muller Bold"
+        width: 270px
+        height: 70px
+        border-radius: 20px
+        border: 2px solid #00eaff
+        color: #fff
+        text-align: center
+        line-height: 70px
+        vertical-align: middle
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 2px
+        font-size: 14px
+        margin: 50px auto 33px
+      &.btn-yellow
+          border: 1px solid #f7ff75 !important
+    &.btn__container
+      //display: block
+      //& > a
+      //  display: inline-block
+      //  margin: 0 auto
+      //  text-align: center
+    input
+      background-color: transparent !important
+      width: 291px
+      border: 0
+      border-bottom: 1px solid #fff
+      height: 30px
+      color: #fff
+      font-size: 14px
+      text-align: center
+      text-transform: uppercase
+      letter-spacing: 2px
+      &:focus
+        outline: none
+      &:active
+        border: 0
+        border-bottom: 1px solid #fff
+    .link
+      letter-spacing: 9px
+      text-transform: uppercase
+      font-size: 8px
+      color: #fff
+      font-weight: bold
+      font-family: "Roboto"
+
