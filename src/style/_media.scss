@@ -203,6 +203,16 @@ $units: 1px !default;
     @content;
   }
 }
+@mixin portrait {
+  @media screen and (max-device-width: 768px)  and (orientation: portrait) {
+    @content;
+  }
+}
+@mixin landscape {
+  @media screen and (max-device-width: 768px)  and (orientation: landscape) {
+    @content;
+  }
+}
 
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
