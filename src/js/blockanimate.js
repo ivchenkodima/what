@@ -1,4 +1,3 @@
-var $ = jQuery;
 var pages = {
     first:[
         "what-1",
@@ -20,33 +19,35 @@ var pages = {
         "who-3"
     ]
 };
-$(document).ready(function () {
-     if ($(" #first").length) {
-        console.log("1");
-         for (var i = 0; pages.first.length; i++) {
-             $("#" + pages.first.length[i]).addClass(".animate");
 
-             // setTimeout(500);
-         }
-     }
+setTimeout(timeout, 500);
 
-    // } else if ($(".main #second").length) {
-    //     console.log("2");
-    //     for (var i= 0 ; pages.second.length; i++ ){
-    //         $("#" + pages.second.length[i]).addClass(".animate");
-    //         setTimeout(500);
-    //     }
-    // } else if ($(".main #error").length) {
-    //     console.log("3");
-    //     for (var i = 0 ; pages.error.length; i++ ){
-    //         $("#" + pages.error.length[i]).addClass(".animate");
-    //         setTimeout(500);
-    //     }
-    // } else if ($(".main #who").length) {
-    //     console.log("4");
-    //     for (var i = 0 ; pages.who.length; i++){
-    //         $("#" + pages.who.length[i]).addClass(".animate");
-    //         setTimeout(500);
-    //     }
-    // } else return;
-});
+function timeout () {
+    $(document).ready(function () {
+        $(window).bind('hashchange', function() {
+            console.log("!");
+            setTimeout(function () {
+                var page = $('.main').attr('id');
+                $("img").addClass("animate-static");
+                $(".link").addClass("animate-static");
+
+                for (var item = 0; item < pages[page].length; item++) {
+                    console.log(pages[page][item]);
+                    (function (index) {
+                        setTimeout(function () {
+                            $("#" + pages[page][index]).addClass('animate-text');
+                        }, index * 1000);
+                    })(item);
+                }
+            }, 0);
+        });
+        // if("addEventListener" in window) {
+        //     window.addEventListener("hashchange", myHashchangeHandler, false);
+        //     console.log("1");
+        // } else if ("attachEvent" in window) {
+        //     window.attachEvent( "onhashchange", myHashchangeHandler);
+        //     console.log("2");
+        // }
+
+    });
+}

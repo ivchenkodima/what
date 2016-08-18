@@ -1,9 +1,20 @@
-.animate
-	animation: member 2s forwards
+.animate-text
+	animation: member 1.5s forwards
+	visibility: visible !important
 @keyframes member
 	0%
 		opacity: 0
-		transform: translateY(200px)
+		transform: translateY(25px)
 	100%
 		opacity: 1
 		transform: translateY(0)
+		display: block !important
+.animate-static
+	animation: member2 2s forwards
+	visibility: visible !important
+@keyframes member2
+	0%
+		opacity: 0
+		display: block !important
+	100%
+		opacity: 1
