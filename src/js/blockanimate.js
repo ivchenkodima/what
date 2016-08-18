@@ -23,11 +23,23 @@ var pages = {
 setTimeout(timeout, 500);
 
 function timeout () {
+
     $(document).ready(function () {
+
+        $("img").addClass("animate-static");
+        $(".link").addClass("animate-static");
+        for (var item = 0; item < pages.first.length; item++) {
+            (function (index) {
+                setTimeout(function () {
+                    $("#" + pages.first[index]).addClass('animate-text');
+                }, index * 1000);
+            })(item);
+        }
         $(window).bind('hashchange', function() {
-            console.log("!");
+            console.log("change");
             setTimeout(function () {
                 var page = $('.main').attr('id');
+                console.log(page);
                 $("img").addClass("animate-static");
                 $(".link").addClass("animate-static");
 
@@ -41,13 +53,25 @@ function timeout () {
                 }
             }, 0);
         });
-        // if("addEventListener" in window) {
-        //     window.addEventListener("hashchange", myHashchangeHandler, false);
-        //     console.log("1");
-        // } else if ("attachEvent" in window) {
-        //     window.attachEvent( "onhashchange", myHashchangeHandler);
-        //     console.log("2");
-        // }
+        $(window).trigger("hashchange");
 
+        $('.transferLink').click(function(e) {
+            console.log('click');
+            setTimeout(function () {
+                var pageClick = $('.main').attr('id');
+                console.log(pageClick);
+                $("img").addClass("animate-static");
+                $(".link").addClass("animate-static");
+
+                for (var item = 0; item < pages[pageClick].length; item++) {
+                    console.log(pages[pageClick][item]);
+                    (function (index) {
+                        setTimeout(function () {
+                            $("#" + pages[pageClick][index]).addClass('animate-text');
+                        }, index * 1000);
+                    })(item);
+                }
+            }, 10);
+        });
     });
 }
