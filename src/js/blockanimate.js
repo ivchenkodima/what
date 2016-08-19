@@ -36,6 +36,7 @@ function timeout () {
         $(window).bind('hashchange', function() {
             setTimeout(function () {
                 var page = $('.main').attr('id');
+                console.log(page);
                 $("img").addClass("animate-static");
                 $(".link").addClass("animate-static");
                 for (var item = 0; item < pages[page].length; item++) {
