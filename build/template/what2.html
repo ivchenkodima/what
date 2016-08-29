@@ -1,11 +1,13 @@
-<section class="main main__what" id="second">
+<section class="main main__what" id="second" ng-controller="mainCtrl">
         <div class="center">
-                <img src="../img/Logo_white.png" alt="">
-                <p id="what-4" class="main__what__description">Иван, посмотри</p>
-                <h1 id="what-5" class="main__what__header film">Манина, девушка в бикини (1952)</h1>
+                <a href="" ui-sref="what">
+                        <img src="../img/Logo_white.png" alt="">
+                </a>
+                <p id="what-4" class="main__what__description" ng-bind="name"></p>
+                <h1 id="what-5" class="main__what__header film">{{film}}</h1>
                 <div id="what-6" class="center btn__container btn-padding">
-                        <a href="/" ui-sref="what" class="two">
-                                <p class=" transferLink btn btn-yellow">Еще совет</p>
+                        <a href="/" ui-sref="what2" class="two">
+                                <p class=" transferLink btn btn-yellow" ng-click="filmUpdate()">Еще совет</p>
                         </a>
                         <a href="/" ui-sref="what" class="two">
                                 <p class="btn">Загуглить</p>

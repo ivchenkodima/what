@@ -1,15 +1,17 @@
-<section class="main main__what " id="first">
+<section class="main main__what " id="first" ng-controller="mainCtrl">
         <div class="center">
-                <img src="../img/Logo_white.png" alt="">
+                <a href="" ui-sref="/what">
+                        <img src="../img/Logo_white.png" alt="">
+                </a>
                 <h1 id="what-1" class="main__what__header">Что смотреть?</h1>
                 <div id="what-2">
-                        <p class="main__what__description">ваше имя</p>
-                        <input type="text" class="form__input"/>
+                        <p class="main__what__description" >ваше имя</p>
+                        <input type="text"  ng-model='newName' class="form__input"/>
                 </div>
-                <a id="what-3" href="/" ui-sref="what2" class="transferLink">
+                <a id="what-3" href="/" ui-sref="what2" class="transferLink" ng-click="setName(newName)" >
                     <div class="btn">Получить совет</div>
                 </a>
-                <a href=""  ui-sref="who">
+                <a href=""  ui-sref="who" >
                         <p class="transferLink link">
                                 Кто он этот робот?
                         </p>

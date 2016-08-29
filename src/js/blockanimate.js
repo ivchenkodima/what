@@ -30,7 +30,7 @@ function timeout () {
             (function (index) {
                 setTimeout(function () {
                     $("#" + pages.first[index]).addClass('animate-text');
-                }, index * 1000);
+                }, index * 500);
             })(item);
         }
         $(window).bind('hashchange', function() {
@@ -43,7 +43,7 @@ function timeout () {
                     (function (index) {
                         setTimeout(function () {
                             $("#" + pages[page][index]).addClass('animate-text');
-                        }, index * 1000);
+                        }, index * 500);
                     })(item);
                 }
             }, 20);
@@ -60,7 +60,7 @@ $(document).undelegate('.transferLink', 'click').delegate('.transferLink', 'clic
             (function (index) {
                 setTimeout(function () {
                     $("#" + pages[pageClick][index]).addClass('animate-text');
-                }, index * 1000);
+                }, index * 500);
             })(item);
         }
     }, 200);
