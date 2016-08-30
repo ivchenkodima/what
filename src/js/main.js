@@ -29,18 +29,16 @@ myApp.config(['$stateProvider','$urlRouterProvider',
 myApp.controller('mainCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
     
     $scope.name = $rootScope.name || '';
+    $scope.$watch('name', function (val) {
+        $rootScope.name = val;
+    });
     
     $scope.film = 'Манина девушка в бикини';
-
-    $scope.setFilm = function (newFilm) {
-        
-        
-        $scope.fild = newFilm;
-        
-    };
-   
     $scope.filmUpdate = function() {
+
+        // ajax
         $scope.film = 'Манина девушка в бикини 2';
+
         setTimeout(function(){
             var film = angular.element(document.querySelector('.film'));
             film.removeClass('animate-text');
@@ -50,8 +48,5 @@ myApp.controller('mainCtrl', ['$scope', '$rootScope', function($scope, $rootScop
         }, 0)
     };
 
-    $scope.$watch('name', function (val) {
-        $rootScope.name = val;
-    })
 
 }]);
