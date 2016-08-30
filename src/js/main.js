@@ -25,21 +25,23 @@ myApp.config(['$stateProvider','$urlRouterProvider',
         $urlRouterProvider.otherwise("/what");
 
     }]);
-myApp.controller('mainCtrl', ['$scope', function($scope) {
 
-    $scope.name = '';
+myApp.controller('mainCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+    $scope.name = $rootScope.name || '';
     $scope.film = 'Манина девушка в бикини';
 
     $scope.setFilm = function (newFilm) {
         $scope.fild = newFilm;
     };
-    $scope.setName = function (_name) {
-        $scope.name = _name;
-    };
+   
     $scope.filmUpdate = function() {
         setTimeout(function(){
             $scope.film = 'Манина девушка в бикини 2';
-        }, 200)
+        }, 0)
     };
+
+    $scope.$watch('name', function (val) {
+        $rootScope.name = val;
+    })
 
 }]);
