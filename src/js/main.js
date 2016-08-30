@@ -27,16 +27,26 @@ myApp.config(['$stateProvider','$urlRouterProvider',
     }]);
 
 myApp.controller('mainCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+    
     $scope.name = $rootScope.name || '';
+    
     $scope.film = 'Манина девушка в бикини';
 
     $scope.setFilm = function (newFilm) {
+        
+        
         $scope.fild = newFilm;
+        
     };
    
     $scope.filmUpdate = function() {
+        $scope.film = 'Манина девушка в бикини 2';
         setTimeout(function(){
-            $scope.film = 'Манина девушка в бикини 2';
+            var film = angular.element(document.querySelector('.film'));
+            film.removeClass('animate-text');
+            var btns = angular.element(document.querySelector('.btn__container'));
+            btns.removeClass('animate-text');
+
         }, 0)
     };
 
